@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Clear 1 Year - सूरज सिंह</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        body {
+            background: #f0f2f5;
+            padding: 10px;
+        }
+        .header {
+            background: #1a73e8;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            color: #1a73e8;
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .todo-item, .health-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .progress-bar {
+            background: #eee;
+            height: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        .progress {
+            background: #1a73e8;
+            height: 10px;
+            border-radius: 5px;
+            width: 50%;
+        }
+        button {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin: 2px;
+        }
+        .quote {
+            font-style: italic;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            body { padding: 5px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📚 UPSC Clear 1 Year</h1>
+        <p>सूरज सिंह, उत्तराखंड</p>
+        <p id="date"></p>
+    </div>
+
+    <!-- टू-डू लिस्ट -->
+    <div class="card">
+        <h2>📝 आज का टू-डू लिस्ट</h2>
+        <div class="todo-item">
+            <input type="checkbox"> इतिहास - प्राचीन सभ्यताएं
+        </div>
+        <div class="todo-item">
+            <input type="checkbox"> भूगोल - जलवायु
+        </div>
+        <div class="todo-item">
+            <input type="checkbox"> राजनीति - संविधान
+        </div>
+        <button onclick="alert('नया टास्क जोड़ें')">+ नया टास्क</button>
+    </div>
+
+    <!-- मोटिवेशनल कोट -->
+    <div class="card">
+        <h2>💭 आज की प्रेरणा</h2>
+        <div class="quote">
+            "कड़ी मेहनत से बेहतर कोई शॉर्टकट नहीं है।"<br>
+            <small>- स्वामी विवेकानंद</small>
+        </div>
+        <button onclick="newQuote()">नया कोट</button>
+    </div>
+
+    <!-- सिलेबस प्रोग्रेस -->
+    <div class="card">
+        <h2>📊 सिलेबस प्रोग्रेस</h2>
+        <div>इतिहास 60%</div>
+        <div class="progress-bar"><div class="progress" style="width:60%"></div></div>
+        <div>भूगोल 40%</div>
+        <div class="progress-bar"><div class="progress" style="width:40%"></div></div>
+        <div>राजनीति 30%</div>
+        <div class="progress-bar"><div class="progress" style="width:30%"></div></div>
+    </div>
+
+    <!-- हेल्थ ट्रैकर -->
+    <div class="card">
+        <h2>❤️ हेल्थ ट्रैकर</h2>
+        <div class="health-item">😴 नींद: 7 घंटे <button>+</button></div>
+        <div class="health-item">💧 पानी: 6 गिलास <button>+</button></div>
+        <div class="health-item">🏃 व्यायाम: 30 मिनट <button>+</button></div>
+    </div>
+
+    <!-- समाचार -->
+    <div class="card">
+        <h2>📰 मुख्य समाचार</h2>
+        <div class="todo-item">🔴 बजट 2024 की घोषणा</div>
+        <div class="todo-item">🟢 जी20 सम्मेलन</div>
+        <div class="todo-item">🔵 चंद्रयान-3 अपडेट</div>
+    </div>
+
+    <div class="footer">
+        © 2024 - सूरज सिंह, उत्तराखंड<br>
+        हिंदी मीडियम से UPSC की तैयारी
+    </div>
+
+    <script>
+        // डेट दिखाएं
+        let today = new Date();
+        document.getElementById('date').innerHTML = today.toLocaleDateString('hi-IN');
+
+        // कोट चेंज करें
+        function newQuote() {
+            let quotes = [
+                '"सफलता अंतिम नहीं है, असफलता घातक नहीं है"',
+                '"कड़ी मेहनत से बेहतर कोई शॉर्टकट नहीं"',
+                '"अपने सपनों को साकार करने के लिए जाग जाओ"'
+            ];
+            alert(quotes[Math.floor(Math.random() * quotes.length)]);
+        }
+    </script>
+</body>
+</html>
